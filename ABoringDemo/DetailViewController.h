@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface DetailViewController : UIViewController
-
+#import "MyCollectionViewCell.h"
+@interface DetailViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UIGestureRecognizerDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
-
+@property (strong,nonatomic)  NSMutableArray *colors;
+@property (nonatomic,assign) BOOL coundbeDel;
 @end
 
